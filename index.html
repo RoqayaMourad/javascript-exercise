@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <section class="home">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg py-2 px-3" data-toggle="modal" data-target="#ex1">Exercise 1 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>a program that allow user to enter number then print it</p>
+                                    <label for="">Enter Number :</label>
+                                    <input type="number" id="ex1input" class="form-control my-2">
+                                    <div id="output" class="my-1"></div>
+                                    <button id="btn1" class="btn btn-dark btn-sm" onclick="exercise1()">Print Number</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex2">Exercise 2 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>a program that take number from user then print yes if that number can divide by 3 and 4 otherwise print no</p>
+                                    <label for="">Enter Number :</label>
+                                    <input type="number" id="ex2input" class="form-control my-2">
+                                    <div id="output2" class="my-1"></div>
+                                    <button id="btn2" class="btn btn-dark btn-sm" onclick="exercise2()">OutPut</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex3">Exercise 3 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>a program that allows the user to insert 2 integers then print the max</p>
+                                    <label for="">Enter Number 1 :</label>
+                                    <input type="number" id="ex3input1" class="form-control my-2">
+                                    <label for="">Enter Number 2 :</label>
+                                    <input type="number" id="ex3input2" class="form-control my-2">
+                                    <div id="output3" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise3()">Print Max Number</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex4">Exercise 4 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive.</p>
+                                    <label for="">Enter Number :</label>
+                                    <input type="number" id="ex4input" class="form-control my-2">
+                                    <div id="output4" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise4()">Check</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex5">Exercise 5 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>a program that take 3 integer from user then print the max element and the min element.
+                                    </p>
+                                    <label for="">Enter Number one :</label>
+                                    <input type="number" id="ex5input1" class="form-control my-2">
+
+                                    <label for="">Enter Number two :</label>
+                                    <input type="number" id="ex5input2" class="form-control my-2">
+
+                                    <label for="">Enter Number three :</label>
+                                    <input type="number" id="ex5input3" class="form-control my-2">
+
+                                    <div id="output51" class="my-1"></div>
+                                    <div id="output52" class="my-1"></div>
+
+                                    <button id="btn5" class="btn btn-dark btn-sm" onclick="exercise5()">Output</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex6">Exercise 6 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>a program that allows the user to insert integer number then finds out is it Even or Odd</p>
+                                    <label for="">Enter Number :</label>
+                                    <input type="number" id="ex6input" class="form-control my-2">
+                                    <div id="output6" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise6()">Check</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex7">Exercise 7 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex7" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>a program that allows the user to insert character then finds out is it vowel or constant</p>
+                                    <label for="">Enter Char :</label>
+                                    <input type="text" id="ex7input" class="form-control my-2">
+                                    <div id="output7" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise7()">Check</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex8">Exercise 8 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex8" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>a program that allows user to insert integer then print all numbers between 1 to that’s number</p>
+                                    <label for="">Enter Number :</label>
+                                    <input type="number" id="ex8input" class="form-control my-2">
+                                    <div id="output8" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise8()">Check</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex9">Exercise 9 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex9" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>a program that allows user to insert integer then print a multiplication table up to 12.</p>
+                                    <label for="">Enter Number :</label>
+                                    <input type="number" id="ex9input" class="form-control my-2">
+                                    <div id="output9" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise9()">Output</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex10">Exercise 10 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex10" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>a program that allows user to insert integer then print all even numbers between 1 to this number</p>
+                                    <label for="">Enter Number :</label>
+                                    <input type="number" id="ex10input" class="form-control my-2">
+                                    <div id="output10" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise10()">Output</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex11">Exercise 11 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex11" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>a program that take two integers then print the power</p>
+                                    <label for="">Enter Number one :</label>
+                                    <input type="number" id="ex11input1" class="form-control my-2">
+                                    <label for="">Enter Number two :</label>
+                                    <input type="number" id="ex11input2" class="form-control my-2">
+                                    <div id="output11" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise11()">Output</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex12">Exercise 12 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex12" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>a program that count average of Numbers</p>
+                                    <div id="output120" class="my-1"></div>
+                                    <div id="output12" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise12()">Output</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex13">Exercise 13 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex13" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>A program that reverse array in another array</p>
+                                    <div id="output13" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise13()">Output</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex14">Exercise 14 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex14" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>A function that take an integer then print it .</p>
+                                    <label for="">Enter Number :</label>
+                                    <input type="number" id="ex14input" class="form-control my-2">
+                                    <div id="output14" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise14(ex14inp)">Output</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex15">Exercise 15 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex15" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>A function take three integers then return the average.</p>
+                                    <label for="">Enter Number one :</label>
+                                    <input type="number" id="ex15input1" class="form-control my-2">
+                                    <label for="">Enter Number two :</label>
+                                    <input type="number" id="ex15input2" class="form-control my-2">
+                                    <label for="">Enter Number three :</label>
+                                    <input type="number" id="ex15input3" class="form-control my-2">
+                                    <div id="output15" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise15(ex15inp1,ex15inp2,ex15inp3)">Output</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex16">Exercise 16 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex16" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>A function that take an integer then return true if this number is prime otherwise return false</p>
+                                    <label for="">Enter Number :</label>
+                                    <input type="number" id="ex16input" class="form-control my-2">
+                                    <div id="output16" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise16(ex16inp)">Output</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex17">Exercise 17 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex17" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>A function that takes an array then return summation of its values</p>
+                                    <label for="" id="label"> </label>
+                                    <div id="output17" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise17()">Sum</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex18">Exercise 18 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex18" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>A function that take char and return true if it is vowel char otherwise return false</p>
+                                    <label for="">Enter char :</label>
+                                    <input type="text" id="ex18input" class="form-control my-2">
+                                    <div id="output18" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise18()">Check the Char</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex19">Exercise 19 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex19" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>A function that take string then return number of vowels</p>
+                                    <label for="">Type your text :</label>
+                                    <input type="text" id="ex19input" class="form-control my-2" placeholder="type ahmed">
+                                    <div id="output19" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise19(ex19inp)">Count </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="exercise my-5">
+                        <button type="button" class="btn btn-light btn-lg  py-2 px-3" data-toggle="modal" data-target="#ex20">Exercise 20 </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="ex20" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-5">
+                                    <p>A function that take string then remove all vowels from it.</p>
+                                    <label for="">Type your text :</label>
+                                    <input type="text" id="ex20input" class="form-control my-2" placeholder="type ahmed">
+                                    <div id="output20" class="my-1"></div>
+                                    <button id="btn3" class="btn btn-dark btn-sm" onclick="exercise20()">Remove all vowels</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
