@@ -25,7 +25,7 @@ var ex3inp1 = document.getElementById("ex3input1");
 var ex3inp2 = document.getElementById("ex3input2");
 
 function exercise3() {
-    if (ex3inp1.value > ex3inp2.value) {
+    if (Number(ex3inp1.value) > Number(ex3inp2.value)) {
         var label3 = '<label> The Max Number : ' + ex3inp1.value + '</label>'
         document.getElementById("output3").innerHTML = label3;
     } else {
@@ -57,24 +57,29 @@ var ex5inp2 = document.getElementById("ex5input2")
 var ex5inp3 = document.getElementById("ex5input3")
 
 function exercise5() {
-    if (ex5inp1.value > ex5inp2.value && ex5inp1.value > ex5inp3.value) {
-        var label5 = '<label> The Max Number is : ' + ex5inp1.value + ' </label>'
+    // compare as numbers, not as text
+    var num1 = Number(ex5inp1.value);
+    var num2 = Number(ex5inp2.value);
+    var num3 = Number(ex5inp3.value);
+
+    if (num1 >= num2 && num1 >= num3) {
+        var label5 = '<label> The Max Number is : ' + num1 + ' </label>'
         document.getElementById("output51").innerHTML = label5;
-    } else if (ex5inp2.value > ex5inp1.value && ex5inp2.value > ex5inp3.value) {
-        var label5 = '<label> The Max Number is : ' + ex5inp2.value + ' </label>'
+    } else if (num2 >= num1 && num2 >= num3) {
+        var label5 = '<label> The Max Number is : ' + num2 + ' </label>'
         document.getElementById("output51").innerHTML = label5;
     } else {
-        var label5 = '<label> The Max Number is : ' + ex5inp3.value + ' </label>'
+        var label5 = '<label> The Max Number is : ' + num3 + ' </label>'
         document.getElementById("output51").innerHTML = label5;
     }
-    if (ex5inp1.value < ex5inp2.value && ex5inp1.value < ex5inp3.value) {
-        var label5 = '<label> The Min Number is : ' + ex5inp1.value1 + ' </label>'
+    if (num1 <= num2 && num1 <= num3) {
+        var label5 = '<label> The Min Number is : ' + num1 + ' </label>'
         document.getElementById("output52").innerHTML = label5;
-    } else if (ex5inp2.value < ex5inp1.value && ex5inp2.value < ex5inp3.value) {
-        var label5 = '<label> The Min Number is : ' + ex5inp2.value + ' </label>'
+    } else if (num2 <= num1 && num2 <= num3) {
+        var label5 = '<label> The Min Number is : ' + num2 + ' </label>'
         document.getElementById("output52").innerHTML = label5;
     } else {
-        var label5 = '<label> The Min Number is : ' + ex5inp3.value + ' </label>'
+        var label5 = '<label> The Min Number is : ' + num3 + ' </label>'
         document.getElementById("output52").innerHTML = label5;
     }
 
@@ -100,11 +105,12 @@ function exercise6() {
 var ex7inp = document.getElementById("ex7input")
 
 function exercise7() {
-    if (ex7inp.value == "a" || ex7inp.value == "e" || ex7inp.value == "o" || ex7inp.value == "i" || ex7inp.value == "u") {
+    var char7 = ex7inp.value.toLowerCase();
+    if (char7 == "a" || char7 == "e" || char7 == "o" || char7 == "i" || char7 == "u") {
         var label7 = '<label> This char is vowel </label>'
         document.getElementById("output7").innerHTML = label7;
     } else {
-        var label7 = '<label> This char is constant </label>'
+        var label7 = '<label> This char is consonant </label>'
         document.getElementById("output7").innerHTML = label7;
     }
 }
@@ -114,7 +120,10 @@ var ex8inp = document.getElementById("ex8input");
 var numbers = [];
 
 function exercise8() {
-    for (let i = 0; i <= ex8inp.value; i++) {
+    // start again on every run
+    numbers = [];
+    document.getElementById("output8").innerHTML = "";
+    for (let i = 1; i <= ex8inp.value; i++) {
         var label8 = '<label class="p-2">' + i + '</label>';
         numbers.push(label8)
         document.getElementById("output8").innerHTML = numbers;
@@ -127,6 +136,8 @@ var ex9inp = document.getElementById("ex9input")
 var results = [];
 
 function exercise9() {
+    // start again on every run
+    results = [];
     for (let i = 0; i <= 12; i++) {
         var label9 = '<label class="p-3">' + i * ex9inp.value + '</label>';
         results.push(label9)
@@ -140,7 +151,10 @@ var ex10inp = document.getElementById("ex10input")
 var evens = [];
 
 function exercise10() {
-    for (let i = 0; i <= ex10inp.value; i++) {
+    // start again on every run
+    evens = [];
+    document.getElementById("output10").innerHTML = "";
+    for (let i = 1; i <= ex10inp.value; i++) {
         if (i % 2 == 0) {
             var label10 = '<label class="p-3">' + i + '</label>';
             evens.push(label10)
@@ -165,6 +179,8 @@ var arr = [2, 4, 6, 1, 5, 7, 8, 9, 12, 4];
 var sum = 0;
 
 function exercise12() {
+    // start again on every run
+    sum = 0;
     for (i = 0; i < arr.length; i++) {
         sum += parseInt(arr[i], 10)
     }
@@ -179,7 +195,8 @@ function exercise12() {
 //exercise13
 // i will use the same array i used in the previous exercise
 function exercise13() {
-    var r_arr = arr.reverse();
+    // reverse a copy, so the first array stays as it is
+    var r_arr = arr.slice().reverse();
     var label13 = '<label class="p-1">the array : ' + arr + '</br></br> The reversed array : ' + r_arr + '</label>'
     document.getElementById("output13").innerHTML = label13;
 }
@@ -209,16 +226,23 @@ function exercise15(ex15inp1, ex15inp2, ex15inp3) {
 var ex16inp = document.getElementById("ex16input")
 
 function exercise16(ex16inp) {
-    for (i = 2; i < ex16inp.value; i++) {
-        if (ex16inp.value % i === 0) {
-            var label16 = '<label class="p-1"> This number is not prime</label>'
-            document.getElementById("output16").innerHTML = label16;
-            return ex16inp.value > 1;
-        } else {
-            var label16 = '<label class="p-1"> This number is prime</label>'
-            document.getElementById("output16").innerHTML = label16;
+    var number16 = Number(ex16inp.value);
+    // 1 and smaller numbers are not prime, 2 is prime
+    var isPrime = Number.isInteger(number16) && number16 > 1;
+    for (i = 2; i < number16; i++) {
+        if (number16 % i === 0) {
+            isPrime = false;
+            break;
         }
     }
+    if (isPrime) {
+        var label16 = '<label class="p-1"> This number is prime</label>'
+        document.getElementById("output16").innerHTML = label16;
+    } else {
+        var label16 = '<label class="p-1"> This number is not prime</label>'
+        document.getElementById("output16").innerHTML = label16;
+    }
+    return isPrime;
 }
 
 //exercise17
@@ -239,47 +263,54 @@ function exercise17() {
 var ex18inp = document.getElementById("ex18input")
 
 function exercise18() {
-    if (ex18inp.value == "a" || ex18inp.value == "e" || ex18inp.value == "o" || ex18inp.value == "i" || ex18inp.value == "u") {
+    var char18 = ex18inp.value.toLowerCase();
+    if (char18 == "a" || char18 == "e" || char18 == "o" || char18 == "i" || char18 == "u") {
         var label18 = '<label class="p-1">The letter : ' + ex18inp.value + ' is a vowel</label>'
         document.getElementById("output18").innerHTML = label18;
     } else {
-        var label18 = '<label class="p-1">The letter : ' + ex18inp.value + ' is a constant</label>'
+        var label18 = '<label class="p-1">The letter : ' + ex18inp.value + ' is a consonant</label>'
         document.getElementById("output18").innerHTML = label18;
     }
 }
 
 
 //exercise19
-var ex19inp = "ahmed"
-    //document.getElementById("ex19input")[i].value;
+var ex19inp = document.getElementById("ex19input")
 
 
 function exercise19(ex19inp) {
+    // use the text the user typed
+    var word19 = ex19inp.value;
     var count = 0
-    for (let i = 0; i < ex19inp.length; i++) {
-        if (ex19inp[i] == "a" || ex19inp[i] == "e" || ex19inp[i] == "i" || ex19inp[i] == "o" || ex19inp[i] == "u") {
+    for (let i = 0; i < word19.length; i++) {
+        var char19 = word19[i].toLowerCase();
+        if (char19 == "a" || char19 == "e" || char19 == "i" || char19 == "o" || char19 == "u") {
             count++;
         }
     }
-    var label19 = '<label class="p-1">the word is : ' + ex19inp + '</br> Number of vowels is : ' + count + '</label>'
-    document.getElementById("output19").innerHTML = label19;
+    document.getElementById("output19").innerHTML = '<label class="p-1"></label>';
+    // added as text so typed characters are shown as they are
+    document.querySelector("#output19 label").innerText = 'the word is : ' + word19 + '\n Number of vowels is : ' + count;
 }
 
 
 //exercise20
-var ex20inp = "ahmed"
-    //String(document.getElementById("ex19input").value);
+var ex20inp = document.getElementById("ex20input")
 
 function exercise20() {
+    // use the text the user typed
+    var word20 = ex20inp.value;
     var count = 0;
     var str2 = ""
-    for (let i = 0; i < ex20inp.length; i++) {
-        if (ex20inp[i] == "a" || ex20inp[i] == "e" || ex20inp[i] == "i" || ex20inp[i] == "o" || ex20inp[i] == "u") {
+    for (let i = 0; i < word20.length; i++) {
+        var char20 = word20[i].toLowerCase();
+        if (char20 == "a" || char20 == "e" || char20 == "i" || char20 == "o" || char20 == "u") {
             count++;
         } else {
-            str2 += ex20inp[i]
+            str2 += word20[i]
         }
     }
-    var label20 = '<label class="p-1">The word without vowels is :' + str2 + '</label>'
-    document.getElementById("output20").innerHTML = label20;
+    document.getElementById("output20").innerHTML = '<label class="p-1"></label>';
+    // added as text so typed characters are shown as they are
+    document.querySelector("#output20 label").innerText = 'The word without vowels is :' + str2;
 }
